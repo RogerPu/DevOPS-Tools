@@ -39,7 +39,7 @@ def header_function(header_line):
 
 buffer = BytesIO()
 c = pycurl.Curl()
-c.setopt(c.URL, 'http://10.100.112.162')
+c.setopt(c.URL, 'qq.com')
 c.setopt(c.WRITEFUNCTION, buffer.write)
 # Set our header function.
 c.setopt(c.HEADERFUNCTION, header_function)
