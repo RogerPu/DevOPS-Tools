@@ -8,7 +8,7 @@ except ImportError:
 
 buffer = BytesIO()
 c = pycurl.Curl()
-#c.setopt(c.URL,'10.21.250.46/rest/couponServices?_wadl')
+#c.setopt(c.URL,'plateno.com')
 c.setopt(c.URL,'plateno.com')
 c.setopt(c.FOLLOWLOCATION,True)
 c.setopt(c.WRITEDATA,buffer)
