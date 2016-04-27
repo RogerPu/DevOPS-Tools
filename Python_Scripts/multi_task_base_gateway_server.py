@@ -49,7 +49,7 @@ def multi_command(ip,user,cmd1,cmd2="free -m"):
         return r3
     else:
         print('Cannot find redis-server')
-        print('Cannot find redis-server')
+
 multi_command(ip,user,cmd)
 
 #if __main___ == "__main__":
