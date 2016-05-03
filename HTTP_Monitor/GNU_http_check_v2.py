@@ -16,12 +16,11 @@ conf_file = '/home/roger/api_info.conf'
 
 def send_sms(phone,body1,body2):
     try:
-        requrl="http://192.168.136.120:8080/sms/send"
-        post_data = {"appId":"1048", "sellerId":"0", "type":"117", "phone":phone, "params":{"project":body1,"ip":body2}}
+        requrl=##msg_send_url
+        post_data = ##Post data here
         post_data_encode = json.dumps(post_data,skipkeys=True)
-        headerdata = {"Content-Type":"application/json", "charset":"UTF-8", "X-AUTH-HEADER":"0F6E7005F89E819D4F5CFB406CC732B7", "Accept":"text/plain"}
-
-        conn = httplib.HTTPConnection('192.168.136.120:8080')
+        headerdata = ##header data here
+        conn = httplib.HTTPConnection('##host here')
         conn.request(method="POST", url=requrl, body=post_data_encode, headers=headerdata)
 
         response = conn.getresponse()
@@ -33,7 +32,7 @@ def send_sms(phone,body1,body2):
         print('Error Occurred when send message')
 
 def send_message_all(body1='Http监控异常',body2='未获取到IP信息'):
-    for phone_number in [18520138780]:
+    for phone_number in [1852013xxxx]:
         print('正在发送短息')
         print('短信内容:[铂涛会]%s%s web访问失败故障!' % (body1,body2))
         #send_sms(phone_number, body1, body2)
