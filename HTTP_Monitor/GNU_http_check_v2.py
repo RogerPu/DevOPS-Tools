@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #coding=utf-8
+##Copyright (C) RogerPu (espwj@126.com), Plateno Groups Inc.
 
 try:
     from io import BytesIO
